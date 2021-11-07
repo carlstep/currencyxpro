@@ -27,13 +27,17 @@ class _HomeState extends State<Home> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Wallet Card Placeholder'
+            Container(
+              child: Text('Wallet Card Placeholder'
+              ),
             ),
             SizedBox(
               height: 24,
             ),
-            Text('Display a list of wallets'
+            Container(
+              child: Text('Display a list of wallets'
 
+              ),
             ),
           ],
         ),
