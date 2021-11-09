@@ -1,3 +1,5 @@
+import 'package:currencyxpro/components/primary_card.dart';
+import 'package:currencyxpro/components/wallet_list_card.dart';
 import 'package:flutter/material.dart';
 
 
@@ -24,22 +26,20 @@ class _HomeState extends State<Home> {
           style: Theme.of(context).textTheme.headline2,),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              child: Text('Wallet Card Placeholder'
+        child: Padding(
+          padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+          child: ListView(
+            children: <Widget>[
+              SizedBox(
+                height: 24,
               ),
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            Container(
-              child: Text('Display a list of wallets'
+              WalletListCard(),
+              WalletListCard(),
+              Container(
 
-              ),
-            ),
-          ],
+                ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(

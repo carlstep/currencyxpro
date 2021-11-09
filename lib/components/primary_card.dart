@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'c';
+import 'package:currencyxpro/home.dart';
 
 class PrimaryCard extends StatelessWidget {
   const PrimaryCard({Key? key}) : super(key: key);
@@ -7,14 +7,23 @@ class PrimaryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Row(
+      child: Column(
         children: [
-          CircleAvatar(
-            backgroundImage: AssetImage(),
+          Row(
+            children: [
+              Text('Country Name'),
+              Text('image placeholder'),
+            ],
+          ),
+          Row(
+            children: [
+              Text('Currency Code'),
+              Text('Value Entry Field'),
+            ],
           )
         ],
       ),
-
     );
   }
 }
+

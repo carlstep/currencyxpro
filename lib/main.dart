@@ -14,7 +14,7 @@ class CurrencyXpro extends StatelessWidget {
     final theme = CurrencyXproTheme.light();
     return MaterialApp(
       title: 'CurrencyX Pro',
-      theme: theme,
+      theme: theme, // TODO: What does this do and how?
       home: const Home(),
     );
   }
