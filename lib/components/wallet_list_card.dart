@@ -1,6 +1,7 @@
 import 'package:currencyxpro/components/primary_card.dart';
+import 'package:currencyxpro/screens/wallet_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:currencyxpro/home.dart';
+
 
 class WalletListCard extends StatelessWidget {
   const WalletListCard({Key? key}) : super(key: key);
@@ -11,7 +12,11 @@ class WalletListCard extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: InkWell(
         onTap: () {
-          PrimaryCard();
+          Navigator.of(context).push(
+              MaterialPageRoute(
+                  builder: (context) => WalletScreen(),
+              ),
+          );
         },
         child: Card(
           child: Padding(
