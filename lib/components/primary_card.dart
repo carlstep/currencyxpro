@@ -6,13 +6,13 @@ class PrimaryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Card(
       child: Column(
         children: [
           Row(
             children: [
-              Text('Country Name'),
               Text('image placeholder'),
+              Text('Country Name'),
             ],
           ),
           Row(

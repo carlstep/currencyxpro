@@ -35,9 +35,7 @@ class _HomeState extends State<Home> {
               ),
               WalletListCard(),
               WalletListCard(),
-              Container(
-
-                ),
+              WalletListCard(),
             ],
           ),
         ),
