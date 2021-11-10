@@ -1,3 +1,4 @@
+import 'package:currencyxpro/components/alt_card.dart';
 import 'package:currencyxpro/components/primary_card.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class WalletScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(color: Colors.grey[800],),
         title: Text('CurrencyX Pro',
           style: Theme.of(context).textTheme.headline2,),
       ),
@@ -21,11 +23,18 @@ class WalletScreen extends StatelessWidget {
                 height: 24,
               ),
               PrimaryCard(),
+              SizedBox(
+                height: 24,
+              ),
+              AltCard(),
+              SizedBox(
+                height: 14,
+              ),
+              AltCard(),
               // TODO: add alt_card
               // TODO: need a plus button to add more alt_cards
             ],
           ),
-          // TODO: add home button
         ),
       ),
     );
