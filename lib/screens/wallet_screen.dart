@@ -14,7 +14,7 @@ class WalletScreen extends StatelessWidget {
         title: Text('CurrencyX Pro',
           style: Theme.of(context).textTheme.headline2,),
       ),
-      body: Center(
+      body: Container(
         child: Padding(
           padding: const EdgeInsets.only(left: 8.0, right: 8.0),
           child: ListView(
