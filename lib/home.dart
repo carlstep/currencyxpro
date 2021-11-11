@@ -1,5 +1,5 @@
 import 'package:currencyxpro/components/primary_card.dart';
-import 'package:currencyxpro/components/wallet_list_card.dart';
+import 'package:currencyxpro/components/wallet_card_list.dart';
 import 'package:flutter/material.dart';
 
 
@@ -33,9 +33,9 @@ class _HomeState extends State<Home> {
               SizedBox(
                 height: 24,
               ),
-              WalletListCard(),
-              WalletListCard(),
-              WalletListCard(),
+              WalletCardList(),
+              WalletCardList(),
+              WalletCardList(),
             ],
           ),
         ),

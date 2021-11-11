@@ -5,36 +5,21 @@ class AltCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
       child: Container(
-        child: Stack(
-          children: [
-            CircleAvatar(
-              radius: 35,
-              backgroundImage: AssetImage("assets/flags/germany.jpeg"),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.only(left: 40.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text('ALL', style: Theme.of(context).textTheme.headline1),
-                    Text('FX Value'),
-                  ],
-                ),
-              ),
-            ),
-          ],
-          clipBehavior: Clip.none,
-        ),
         constraints: const BoxConstraints.expand(
-          width: 350,
+          width: 300,
           height: 70,
         ),
         decoration: BoxDecoration(
-          //border: Border.all(color: Colors.grey, width: .1),
-          color: Colors.grey[100],
+          color: Colors.grey[200],
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(35),
+            bottomLeft: Radius.circular(35),
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
@@ -42,13 +27,25 @@ class AltCard extends StatelessWidget {
               blurRadius: 9,
               offset: Offset(-5, 5),
             )
+          ]
+        ),
+        child: Row(
+          children: [
+            CircleAvatar(
+              radius: 35,
+              backgroundImage: AssetImage("assets/flags/germany.jpeg"),
+            ),
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text('isoCode'),
+                  Text('output value'),
+                ],
+              ),
+            ),
+
           ],
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(35),
-            bottomLeft: Radius.circular(35),
-            topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35),
-          ),
         ),
       ),
     );

@@ -3,8 +3,8 @@ import 'package:currencyxpro/screens/wallet_screen.dart';
 import 'package:flutter/material.dart';
 
 
-class WalletListCard extends StatelessWidget {
-  const WalletListCard({Key? key}) : super(key: key);
+class WalletCardList extends StatelessWidget {
+  const WalletCardList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
