@@ -1,6 +1,6 @@
 import 'package:currencyxpro/components/alt_card.dart';
 import 'package:currencyxpro/components/primary_card.dart';
-import 'package:currencyxpro/components/wallet_details_card.dart';
+import 'package:currencyxpro/components/wallet_card.dart';
 import 'package:flutter/material.dart';
 
 
@@ -21,7 +21,7 @@ class WalletScreen extends StatelessWidget {
           child: ListView(
             //scrollDirection: Axis.horizontal,
             children: <Widget>[
-              WalletDetailsCard(),
+              WalletCard(),
             ],
           ),
         ),

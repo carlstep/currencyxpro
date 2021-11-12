@@ -2,8 +2,8 @@ import 'package:currencyxpro/components/alt_card.dart';
 import 'package:currencyxpro/components/primary_card.dart';
 import 'package:flutter/material.dart';
 
-class WalletDetailsCard extends StatelessWidget {
-  const WalletDetailsCard({Key? key}) : super(key: key);
+class WalletCard extends StatelessWidget {
+  const WalletCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
