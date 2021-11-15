@@ -21,13 +21,13 @@ class PrimaryCard extends StatelessWidget {
               child: Text('United States of America',
               style: Theme.of(context).textTheme.headline3),
               top: 10,
-              left: 80,
+              right: 10,
             ),
             Positioned(
               child: Text('USD',
                 style: Theme.of(context).textTheme.headline1),
-              left: 80,
-              bottom: 30,
+              left: 30,
+              bottom: 5,
             ),
             Positioned(
               child: SizedBox(
@@ -48,8 +48,8 @@ class PrimaryCard extends StatelessWidget {
           clipBehavior: Clip.none,
         ),
         constraints: const BoxConstraints.expand(
-          width: 350,
-          height: 150,
+          width: 380,
+          height: 120,
         ),
         decoration: BoxDecoration(
             //border: Border.all(color: Colors.grey, width: .1),

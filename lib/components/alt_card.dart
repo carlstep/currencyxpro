@@ -6,14 +6,14 @@ class AltCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(8.0),
       child: Container(
         constraints: const BoxConstraints.expand(
-          width: 300,
+          width: 250,
           height: 70,
         ),
         decoration: BoxDecoration(
-          color: Colors.grey[200],
+          color: Colors.grey[100],
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(35),
             bottomLeft: Radius.circular(35),
@@ -23,9 +23,9 @@ class AltCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 5,
+              spreadRadius: 2,
               blurRadius: 9,
-              offset: Offset(-5, 5),
+              offset: Offset(0, 5),
             )
           ]
         ),
@@ -33,7 +33,11 @@ class AltCard extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 35,
-              backgroundImage: AssetImage("assets/flags/germany.jpeg"),
+              backgroundColor: Colors.transparent,
+              child: CircleAvatar(
+                radius: 30,
+                backgroundImage: AssetImage("assets/flags/germany.jpeg"),
+              ),
             ),
             Expanded(
               child: Row(

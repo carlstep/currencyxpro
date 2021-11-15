@@ -22,6 +22,7 @@ class WalletScreen extends StatelessWidget {
             //scrollDirection: Axis.horizontal,
             children: <Widget>[
               WalletCard(),
+              WalletCard(),
             ],
           ),
         ),
