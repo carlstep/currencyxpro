@@ -1,5 +1,6 @@
 import 'package:currencyxpro/components/alt_card.dart';
 import 'package:currencyxpro/components/primary_card.dart';
+import 'wallet_header.dart';
 import 'package:flutter/material.dart';
 
 // displays the contents of a wallet.
@@ -14,9 +15,8 @@ class WalletCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Container(
-        padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
-          border: Border.all(width: 2.0, color: Colors.grey),
+          border: Border.all(width: 0.5, color: Colors.grey),
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(35),
               topRight: Radius.circular(35),
@@ -26,43 +26,26 @@ class WalletCard extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Wallet Name',
-                  style: Theme.of(context).textTheme.headline2,
-                ),
+            WalletHeader(),
+        SizedBox(height: 30),
+        PrimaryCard(),
+        Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: SizedBox(
+            height: 450,
+            child: ListView(
+              children: <Widget>[
+                AltCard(),
+                AltCard(),
+                AltCard(),
+                AltCard(),
+                AltCard(),
+                AltCard(),
+                AltCard(),
+                AltCard(),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Location',
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-              ],
-            ),
-            SizedBox(height: 30),
-            PrimaryCard(),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: SizedBox(
-                height: 500,
-                child: ListView(
-                  children: <Widget>[
-                    AltCard(),
-                    AltCard(),
-                    AltCard(),
-                    AltCard(),
-                    AltCard(),
-                    AltCard(),
-                    AltCard(),
-                    AltCard(),
-                  ],
-                ),
-              ),
+          ),
             ),
           ],
         ),

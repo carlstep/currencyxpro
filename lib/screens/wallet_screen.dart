@@ -9,6 +9,7 @@ class WalletScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final PageController controller = PageController(initialPage: 0);
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(color: Colors.grey[800],),
@@ -18,9 +19,10 @@ class WalletScreen extends StatelessWidget {
       body: Container(
         child: Padding(
           padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-          child: ListView(
+          child: PageView(
             //scrollDirection: Axis.horizontal,
             children: <Widget>[
+              WalletCard(),
               WalletCard(),
               WalletCard(),
             ],

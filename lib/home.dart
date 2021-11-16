@@ -1,9 +1,9 @@
-import 'package:currencyxpro/components/wallet_card_list.dart';
+import 'package:currencyxpro/components/wallet_header.dart';
+import 'package:currencyxpro/screens/wallet_screen.dart';
 import 'package:flutter/material.dart';
 
-
 class Home extends StatefulWidget {
-  const Home ({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
   @override
   _HomeState createState() => _HomeState();
 }
@@ -21,8 +21,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('CurrencyX Pro',
-          style: Theme.of(context).textTheme.headline2,),
+        title: Text(
+          'CurrencyX Pro',
+          style: Theme.of(context).textTheme.headline2,
+        ),
       ),
       body: Center(
         child: Padding(
@@ -32,9 +34,16 @@ class _HomeState extends State<Home> {
               SizedBox(
                 height: 24,
               ),
-              WalletCardList(),
-              WalletCardList(),
-              WalletCardList(),
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => WalletScreen(),
+                    ),
+                  );
+                },
+                child: WalletHeader(),
+              ),
             ],
           ),
         ),
@@ -43,7 +52,7 @@ class _HomeState extends State<Home> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }
