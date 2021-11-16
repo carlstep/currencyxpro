@@ -2,6 +2,10 @@ import 'package:currencyxpro/components/alt_card.dart';
 import 'package:currencyxpro/components/primary_card.dart';
 import 'package:flutter/material.dart';
 
+// displays the contents of a wallet.
+// contains the wallet information with primaryCard
+// contains altCard or multiple altCards
+
 class WalletCard extends StatelessWidget {
   const WalletCard({Key? key}) : super(key: key);
 
